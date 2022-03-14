@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.firstproject.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_cubeFragment"
+            app:destination="@id/cubeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_randFragment"
+            app:destination="@id/randFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cubeFragment"
+        android:name="com.example.firstproject.CubeFragment"
+        android:label="CubeFragment" />
+    <fragment
+        android:id="@+id/randFragment"
+        android:name="com.example.firstproject.RandFragment"
+        android:label="RandFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.firstproject.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsCubeFragment"
+            app:destination="@id/settingsCubeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsRandFragment"
+            app:destination="@id/settingsRandFragment"/>
+
+        <argument
+            android:name="stringName"
+            app:argType="string"
+            app:nullable="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsCubeFragment"
+        android:name="com.example.firstproject.SettingsCubeFragment"
+        android:label="SettingsCubeFragment" />
+    <fragment
+        android:id="@+id/settingsRandFragment"
+        android:name="com.example.firstproject.SettingsRandFragment"
+        android:label="SettingsRandFragment" />
+</navigation>
